@@ -2,12 +2,14 @@ import React from 'react';
 import * as RadixTabs from '@radix-ui/react-tabs';
 
 const Tabs = ({ props }) => {
-  <RadixTabs.Tabs>
-    <RadixTabs.TabsList>
-      <RadixTabs.TabsTrigger value="tab1">Sign in</RadixTabs.TabsTrigger>
-      <RadixTabs.TabsTrigger value="tab2">Sign up</RadixTabs.TabsTrigger>
-    </RadixTabs.TabsList>
-  </RadixTabs.Tabs>;
+  return (
+    <RadixTabs.Root defaultValue="tab1">
+      <RadixTabs.List>
+        <RadixTabs.Trigger value="tab1">Sign in</RadixTabs.Trigger>
+        <RadixTabs.Trigger value="tab2">Sign up</RadixTabs.Trigger>
+      </RadixTabs.List>
+    </RadixTabs.Root>
+  );
 };
 
 export default Tabs;
